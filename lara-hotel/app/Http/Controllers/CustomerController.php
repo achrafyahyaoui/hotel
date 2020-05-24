@@ -54,7 +54,7 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        return "hi there";
+        return "hi there!!";
     }
 
     /**
