@@ -95,6 +95,6 @@ class CustomerController extends Controller
      */
     public function destroy(Customer $customer)
     {
-        //
+        return "hello"
     }
 }
