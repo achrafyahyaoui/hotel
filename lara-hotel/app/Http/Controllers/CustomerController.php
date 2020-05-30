@@ -98,6 +98,6 @@ class CustomerController extends Controller
         $customer = Customer::where('id',$id)->first();
         $customer->delete();
 
-        return redirect()->route('clients.index');
+        return redirect('/client');
     }
 }

@@ -18,7 +18,7 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Image</th>
-            <th>Actions</th>
+            <th >Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -30,24 +30,22 @@
                     <td>{{ $client->phone }}</td>
                     <td><img src="{{ url('/uploads').'/'. $client->image }}" width="30px" class="img-thumbnail"></td>
                     <td>
-                            <a href="{{'client/'.$client->id.'/edit'}}">
-                                <div class="btn btn-primary">
+                                                     
+                    <form action="{{ route('client.destroy',$client->id)}}" method='POST' >
+                        <a href="{{'client/'.$client->id.'/detail'}}">
+                            <div class="btn btn-success">
+                                   <i class="fa fa-eye"></i>
+                            </div>
+                        </a>
+                        <a href="{{'client/'.$client->id.'/edit'}}">
+                            <div class="btn btn-primary">
                                     <i class="fa fa-pencil"></i>
-                                </div>
-                            </a>
-
-                            <a href="{{'client/'.$client->id.'/detail'}}">
-                                <div class="btn btn-success">
-                                    <i class="fa fa-eye"></i>
-                                </div>
-                            </a>
-                        
-                            <a href="">
-                                <div class="btn btn-danger">
-                                    <i class="fa fa-trash"></i>
-                                </div>
-                            </a>
-                        
+                            </div>
+                        </a>
+                        @csrf 
+                        @method('DELETE')
+                        <button type='submit' class='btn btn-danger'><i class="fa fa-trash"></i></button>
+                    </form>
                     </td>
                 </tr>
             @endforeach
