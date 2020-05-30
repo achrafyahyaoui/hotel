@@ -15,6 +15,7 @@ class CustomerController extends Controller
     public function index()
     {
         $clients = Customer::all();
+        $clients = Customer::orderBy('id', 'ASC')->get();
         return view('clients.index')->with('clients',$clients);
     }
 
@@ -54,7 +55,8 @@ class CustomerController extends Controller
      */
     public function show($id)
     {
-        return "hi there";
+        $customer = Customer::find($id);
+        return view('clients.detail')->with('client',$customer);
     }
 
     /**

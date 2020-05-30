@@ -32,7 +32,7 @@
                     <td>
                                                      
                     <form action="{{ route('client.destroy',$client->id)}}" method='POST' >
-                        <a href="{{'client/'.$client->id.'/detail'}}">
+                        <a href="{{'client/'.$client->id}}">
                             <div class="btn btn-success">
                                    <i class="fa fa-eye"></i>
                             </div>
