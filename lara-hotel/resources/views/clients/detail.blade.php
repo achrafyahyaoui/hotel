@@ -45,6 +45,7 @@ span.tags
 @endsection
 
 @section('content')
+<!-- page title -->
 <h1><i class="fa fa-user"></i> {{ $client->name }} Details</h1>
 <div class="container">
 	<div class="row">
@@ -52,6 +53,7 @@ span.tags
     	 <div class="well profile">
             <div class="col-sm-12">
                 <div class="col-xs-12 col-sm-8">
+                    <!-- client info -->
                     <h2>{{ $client->name }}</h2>
                     <p><strong>Phone: </strong> {{$client->phone}} </p>
                     <p><strong>Email: </strong> {{$client->email}} </p>
@@ -61,13 +63,15 @@ span.tags
                         <span class="tags">Note3</span>
                         <span class="tags">Note4</span>
                     </p>
-                </div>             
+                </div>
+                <!-- default profile image -->
                 <div class="col-xs-12 col-sm-4 text-center">
                     <figure>
                         <img src="/images/Profile-icon.png" alt="xxx" class="img-circle img-responsive">
                     </figure>
                 </div>
             </div>
+            <!-- client history -->
             <div class="col-xs-12 divider text-center">
             <div class="col-xs-12 col-sm-4 emphasis">
                     <h2><strong>Room Double</strong></h2>      
@@ -93,7 +97,8 @@ span.tags
                     <p><small>Check In: Friday, Oct 15, 2020</small></p>
                     <p><small>Check Out: Wednesday, Oct 22, 2020</small></p>
                 </div>
-            </div>            
+            </div>
+            <!-- Action buttons -->
             <div class="col-xs-12 divider text-center pt-4">
                 <div class="col-xs-12 col-sm-4">
                     <a href="{{$client->id.'/edit'}}">

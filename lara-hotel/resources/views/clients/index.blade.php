@@ -32,16 +32,19 @@
                     <td>
                                                      
                     <form action="{{ route('client.destroy',$client->id)}}" method='POST' >
+                        <!-- Client Details -->
                         <a href="{{'client/'.$client->id}}">
                             <div class="btn btn-success">
                                    <i class="fa fa-eye"></i>
                             </div>
                         </a>
+                        <!-- Edit Client -->
                         <a href="{{'client/'.$client->id.'/edit'}}">
                             <div class="btn btn-primary">
                                     <i class="fa fa-pencil"></i>
                             </div>
                         </a>
+                        <!-- Delete Client -->
                         @csrf 
                         @method('DELETE')
                         <button type='submit' class='btn btn-danger'><i class="fa fa-trash"></i></button>
