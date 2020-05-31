@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <h1><i class="fa fa-pencil"></i> Edit Client</h1>
+    <h1><i class="fa fa-pencil"></i> Edit Client by isamil</h1>
     <div class="row">
         <div class="col-md-8">
             <form method="post" action="{{route('client.update' , $client->id)}}">
